@@ -168,9 +168,9 @@ function M:create_and_select_window(menu_ids, status)
 		table.insert(self.menus, m)
 
 		-- create keymaps for the given window
-		vim.keymap.set("n", m.keymap, function()
-			self:select_window(m.id)
-		end, { buffer = self.bufnr, silent = true })
+		-- vim.keymap.set("n", m.keymap, function()
+		-- 	self:select_window(m.id)
+		-- end, { buffer = self.bufnr, silent = true })
 	end
 
 	-- create a new winbar

@@ -24,7 +24,7 @@ function M._create_buf_with_win(bufname, output_window_split)
 	vim.api.nvim_set_option_value("buflisted", false, { buf = M.bufnr })
 
 	-- create a new window
-	vim.api.nvim_open_win(M.bufnr, true, { split = output_window_split or "right" })
+	vim.api.nvim_open_win(M.bufnr, false, { split = output_window_split or "right" })
 	M.winnr = vim.api.nvim_get_current_win()
 
 	-- activate the window

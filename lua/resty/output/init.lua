@@ -29,7 +29,6 @@ function M._create_buf_with_win(bufname, output_window_split)
   })
 
 	-- activate the window
-	vim.api.nvim_set_current_win(M.winnr)
 	vim.api.nvim_buf_set_lines(M.bufnr, -1, -1, false, { "please wait ..." })
 
 	return M.bufnr, M.winnr
